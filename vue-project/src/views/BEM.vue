@@ -18,10 +18,10 @@
 
 <style lang='scss'>
 .ddd {
-  @include bfc;
+  @include bfc; // 此行 仅用来测试样式抽离，与BEM架构无关
 }
 @include b(aaa) {
-  @include bfc;
+  @include bfc; // 此行 仅用来测试样式抽离，与BEM架构无关
   color: red;
   font-size: 30px;
   @include e(bbb) {
