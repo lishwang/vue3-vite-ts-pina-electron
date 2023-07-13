@@ -21,6 +21,7 @@
   @include bfc;
 }
 @include b(aaa) {
+  @include bfc;
   color: red;
   font-size: 30px;
   @include e(bbb) {
