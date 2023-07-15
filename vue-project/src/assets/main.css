@@ -1,5 +1,7 @@
 @import './base.css';
-
+li {
+  list-style: none;
+}
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -24,12 +26,14 @@ a,
 @media (min-width: 1024px) {
   body {
     display: flex;
-    place-items: center;
+    width: 100%;
+    /* place-items: center; */
   }
 
   #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
     padding: 0 2rem;
+    width: 100%;
   }
 }
