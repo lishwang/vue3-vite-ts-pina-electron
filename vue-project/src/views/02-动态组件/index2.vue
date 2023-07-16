@@ -1,4 +1,5 @@
 <template>
+  <div>动态组件 使用方式2</div>
   <ul class="tags">
     <li
       :class="{ active: currentTag === item.value }"
@@ -17,32 +18,41 @@
 </template>
 
 <script setup>
-import { ref, reactive, shallowRef, markRaw } from 'vue'
-import PropsVue from './01-父子组件传参/index.vue'
-import ActiveComVue from './02-动态组件/index1.vue'
+import { ref, shallowRef, markRaw, reactive } from 'vue'
 
 const tags = reactive([
   {
-    label: '传参',
-    value: 'props',
-    com: markRaw(PropsVue)
+    label: 'AVue',
+    value: 'AVue',
+    com: 'AVue'
   },
   {
-    label: '传参2',
-    value: 'activeCom',
-    com: markRaw(ActiveComVue)
+    label: 'BVue',
+    value: 'BVue',
+    com: 'BVue'
   }
 ])
 
-const comId = shallowRef(PropsVue)
-const currentTag = ref('props')
+const comId = shallowRef('AVue')
+const currentTag = ref('AVue')
 const tagClick = (item) => {
   comId.value = item.com
   currentTag.value = item.value
 }
 </script>
 
-<style lang="scss">
+<script>
+import AVue from './AVue.vue'
+import BVue from './BVue.vue'
+export default {
+  components: {
+    AVue,
+    BVue
+  }
+}
+</script>
+
+<style lang="scss" scoped>
 .study-vue {
   padding: 1rem;
 }

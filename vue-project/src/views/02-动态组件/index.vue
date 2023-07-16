@@ -18,24 +18,24 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, shallowRef, markRaw, reactive } from 'vue'
 import AVue from './AVue.vue'
 import BVue from './BVue.vue'
 
-const tags = ref([
+const tags = reactive([
   {
     label: 'AVue',
     value: 'AVue',
-    com: AVue
+    com: markRaw(AVue)
   },
   {
     label: 'BVue',
     value: 'BVue',
-    com: BVue
+    com: markRaw(BVue)
   }
 ])
 
-const comId = ref(AVue)
+const comId = shallowRef(AVue)
 const currentTag = ref('AVue')
 const tagClick = (item) => {
   comId.value = item.com
