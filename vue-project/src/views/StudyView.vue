@@ -13,24 +13,32 @@
   <div class="study-vue">
     <!-- 动态组件 -->
     <component :is="comId"></component>
+    <!-- 全局组件 -->
+    <CardVue content="xxx" />
   </div>
 </template>
 
 <script setup>
 import { ref, reactive, shallowRef, markRaw } from 'vue'
 import PropsVue from './01-父子组件传参/index.vue'
-import ActiveComVue from './02-动态组件/index1.vue'
+import ActiveComVue from './02-动态组件/index.vue'
+import TreeVue from './04-递归组件/index.vue'
 
 const tags = reactive([
   {
-    label: '传参',
+    label: '父子组件传参',
     value: 'props',
     com: markRaw(PropsVue)
   },
   {
-    label: '传参2',
+    label: '动态组件',
     value: 'activeCom',
     com: markRaw(ActiveComVue)
+  },
+  {
+    label: '递归组件',
+    value: 'activeCom',
+    com: markRaw(TreeVue)
   }
 ])
 
