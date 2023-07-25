@@ -24,6 +24,7 @@ import PropsVue from './01-父子组件传参/index.vue'
 import ActiveComVue from './02-动态组件/index.vue'
 import TreeVue from './04-递归组件/index.vue'
 import asyncVue from './05-异步组件/index.vue'
+import TeleportVue from './06-Teleport传送组件/index.vue'
 
 const tags = reactive([
   {
@@ -45,6 +46,11 @@ const tags = reactive([
     label: '异步组件',
     value: 'async',
     com: markRaw(asyncVue)
+  },
+  {
+    label: '传送组件',
+    value: 'Teleport',
+    com: markRaw(TeleportVue)
   }
 ])
 
