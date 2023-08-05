@@ -25,6 +25,7 @@ import ActiveComVue from './02-动态组件/index.vue'
 import TreeVue from './04-递归组件/index.vue'
 import asyncVue from './05-异步组件/index.vue'
 import TeleportVue from './06-Teleport传送组件/index.vue'
+import ProvideVue from './07-provide-inject依赖注入/index.vue'
 
 const tags = reactive([
   {
@@ -51,6 +52,11 @@ const tags = reactive([
     label: '传送组件',
     value: 'Teleport',
     com: markRaw(TeleportVue)
+  },
+  {
+    label: '依赖注入',
+    value: 'provide',
+    com: markRaw(ProvideVue)
   }
 ])
 
