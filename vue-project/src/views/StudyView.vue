@@ -26,6 +26,7 @@ import TreeVue from './04-递归组件/index.vue'
 import asyncVue from './05-异步组件/index.vue'
 import TeleportVue from './06-Teleport传送组件/index.vue'
 import ProvideVue from './07-provide-inject依赖注入/index.vue'
+import BusVue from './08-兄弟组件传参&bus封装/index.vue'
 
 const tags = reactive([
   {
@@ -57,6 +58,11 @@ const tags = reactive([
     label: '依赖注入',
     value: 'provide',
     com: markRaw(ProvideVue)
+  },
+  {
+    label: '兄弟传参Bus',
+    value: 'Bus',
+    com: markRaw(BusVue)
   }
 ])
 
