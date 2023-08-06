@@ -27,6 +27,9 @@ import asyncVue from './05-异步组件/index.vue'
 import TeleportVue from './06-Teleport传送组件/index.vue'
 import ProvideVue from './07-provide-inject依赖注入/index.vue'
 import BusVue from './08-兄弟组件传参&bus封装/index.vue'
+import TSXVue from './09-TSX/index.vue'
+import imgsVue from './10-图片懒加载/index.vue'
+import elMoveVue from './11-自定义指令-拖拽案例/index.vue'
 
 const tags = reactive([
   {
@@ -63,6 +66,21 @@ const tags = reactive([
     label: '兄弟传参Bus',
     value: 'Bus',
     com: markRaw(BusVue)
+  },
+  {
+    label: 'TSX',
+    value: 'TSX',
+    com: markRaw(TSXVue)
+  },
+  {
+    label: '图片懒加载',
+    value: 'imgsVue',
+    com: markRaw(imgsVue)
+  },
+  {
+    label: '自定义指令+拖拽',
+    value: 'elMoveVue',
+    com: markRaw(elMoveVue)
   }
 ])
 
