@@ -30,6 +30,7 @@ import BusVue from './08-兄弟组件传参&bus封装/index.vue'
 import TSXVue from './09-TSX/index.vue'
 import imgsVue from './10-图片懒加载/index.vue'
 import elMoveVue from './11-自定义指令-拖拽案例/index.vue'
+import useResizeVue from './12-监听dom宽高变化/index.vue'
 
 const tags = reactive([
   {
@@ -81,6 +82,11 @@ const tags = reactive([
     label: '自定义指令+拖拽',
     value: 'elMoveVue',
     com: markRaw(elMoveVue)
+  },
+  {
+    label: '监听dom宽高变化',
+    value: 'useResizeVue',
+    com: markRaw(useResizeVue)
   }
 ])
 
