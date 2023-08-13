@@ -31,6 +31,7 @@ import TSXVue from './09-TSX/index.vue'
 import imgsVue from './10-图片懒加载/index.vue'
 import elMoveVue from './11-自定义指令-拖拽案例/index.vue'
 import useResizeVue from './12-监听dom宽高变化/index.vue'
+import useBase64 from './13-图片转base64/index.vue'
 
 const tags = reactive([
   {
@@ -87,6 +88,11 @@ const tags = reactive([
     label: '监听dom宽高变化',
     value: 'useResizeVue',
     com: markRaw(useResizeVue)
+  },
+  {
+    label: '图片转base64',
+    value: 'useBase64',
+    com: markRaw(useBase64)
   }
 ])
 
